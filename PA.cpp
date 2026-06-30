@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
         }else if(queries[i][0]==2)
         {
             idx = (x^lastAnswer)%n;
-            lastAnswer = arr[idx][y%sizeof(arr[idx])];
+            lastAnswer = arr[idx][y%arr[idx].size()];
             cout<<lastAnswer<<endl;
         }     
     }
