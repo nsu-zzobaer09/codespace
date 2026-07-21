@@ -15,15 +15,17 @@ int main(int argc, char const *argv[]){
     cin>>s1>>s2;
 
     long long l1,l2;
-    l1 = s1.size();
-    l2 = s2.size();
+    l1 = s1.size()-1;
+    l2 = s2.size()-1;
     
-    while (l1--&&l2--)
-    {
+    while (true)
+    {   
         if(s1[l1]!=s2[l2]){
             l1++;l2++;
             break;
         }
+        if(l1==0||l2==0) break;
+        l1--;l2--;
     }
     cout<<l1+l2<<endl;
 }
